@@ -1,0 +1,230 @@
+body {
+  background: linear-gradient(
+      rgba(232, 122, 144, 0.9),
+      rgba(254, 225, 227, 0.9)
+    ),
+    url(../image/omikujiImg/kaminarimon.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+#logoTokyo {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  z-index: 0;
+  width: 10vw;
+  height: 80vh;
+  background-image: url(../image/indexImg/LOGO_black.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* border: 1px solid black; */
+}
+
+#thisTitle {
+  margin: 30px auto;
+  font-family: "Noto Serif JP", serif;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+}
+
+hr {
+  /* height: 1px; */
+  width: 30%;
+  /* background-color: white; */
+}
+
+/* 拜拜區 */
+
+.byebye {
+  position: relative;
+  margin: 5% auto;
+  height: 60vh;
+  width: 80vw;
+}
+
+.byebye img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.byebye > div:nth-of-type(1) {
+  position: relative;
+  height: 500px;
+  width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* 鈴鐺 */
+
+#animeImg {
+  height: 350px;
+  width: 152px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#animeImg > img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 0;
+}
+
+/* 利用背景圖片做動畫 */
+
+/* #animeImg {
+  height: 400px;
+  width: 180px;
+  margin: auto;
+  background-image: url(../image/omikuji/Bells.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 50 50;
+  overflow: hidden;
+  animation: animeName 1.2s steps(7) 1;
+  animation-play-state: paused;
+} */
+
+/* @keyframes animeName {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -1390px;
+  }
+} */
+
+/* 奉獻箱 */
+
+#box {
+  position: relative;
+  margin: auto;
+  bottom: 0;
+  max-width: 100%;
+  z-index: -1;
+}
+
+/* 信徒 */
+
+#people {
+  position: absolute;
+  left: calc(40vw - 440px);
+  top: 190px;
+  width: 240px;
+  transition: 2s;
+  transition-delay: 1s;
+}
+
+#people:hover {
+  cursor: url(../image/point_check.png), auto;
+}
+
+/* 錢包 */
+
+#money {
+  position: absolute;
+  left: calc(40vw - 400px);
+  top: 400px;
+  height: 200px;
+  width: 0px;
+  transition: 1s;
+}
+
+/* 硬幣 */
+
+#coin {
+  position: absolute;
+  left: calc(40vw - 330px);
+  top: 350px;
+  height: 80px;
+  width: 80px;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: 1s;
+  transition-delay: 1s;
+}
+
+#mikujiBox,
+#coin:hover {
+  cursor: url(../image/point_hand.png), auto;
+}
+
+/* 籤箱 */
+
+#mikujiBox {
+  position: absolute;
+  left: calc(40vw + 220px);
+  top: 140px;
+  height: 320px;
+  width: 230px;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: 1s;
+  transition-delay: 1.5s;
+}
+
+/* 跳出顯示窗 顯示籤 */
+
+#showMikuji {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 95vh;
+  width: 90%;
+  z-index: 3;
+  display: none;
+  opacity: 0;
+  justify-content: center;
+  justify-items: center;
+  background: linear-gradient(
+    rgba(254, 225, 227, 0.9),
+    rgba(87, 177, 219, 0.7)
+  );
+  transition: 0.5s;
+}
+
+#showMikuji img {
+  height: 100%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.MikujiFade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 64px;
+  color: var(--tokyoColor03);
+}
+
+.closeBtn:hover {
+  /* color: white; */
+  cursor: pointer;
+}

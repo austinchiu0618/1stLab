@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap");
+/* font-family: 'Noto Sans JP', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;400;700&display=swap");
+/* font-family: 'Noto Serif JP', serif; */
+
+:root {
+  --tokyoColor01: #57b1db;
+  --tokyoColor02: rgb(11, 52, 110);
+  --tokyoColor03: #86473f;
+  --tokyoColor04: #e87a90;
+  --tokyoColor05: #fedfe1;
+  font-family: "Noto Sans JP", sans-serif;
+  box-sizing: border-box;
+}
+
+/* 網頁載入前畫面 */
+
+div.openBody:nth-of-type(1) {
+  width: 33%;
+  left: 0;
+}
+
+.openBody:nth-of-type(2) {
+  width: 34%;
+  left: 33%;
+  /* background-image: url(../image/indexImg/LOGO_open.png);
+  background-size: 30%;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+
+.openBody:nth-of-type(3) {
+  width: 33%;
+  left: 67%;
+}
+
+div.openBody {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  height: 100%;
+  background: var(--tokyoColor04);
+  transition: 2s cubic-bezier(0.8, 0.01, 0.2, 0.99);
+}
+
+#openBodyImg {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 20vw;
+  margin: auto;
+  opacity: 1;
+  transition: 2s cubic-bezier(0.8, 0.01, 0.2, 0.99);
+  display: "block";
+  z-index: 99;
+  visibility: visible;
+}
+
+/* 右上角ICON */
+
+.iconMenu {
+  position: fixed;
+  top: 2vw;
+  right: 2vw;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.iconMenu:hover {
+  animation: iconAnima 1s infinite;
+}
+
+@keyframes iconAnima {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 5px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+.iconBox {
+  display: inline-block;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.iconBox:nth-of-type(1), .iconBox:nth-of-type(3) {
+  width: 4px;
+  height: 37px;
+}
+
+.iconBox:nth-of-type(2) {
+  width: 4px;
+  height: 47px;
+  margin: 0 12px;
+}
+
+.iconChange .iconBox:nth-of-type(1) {
+  transform: scale(1.2) translate(13px, 0px) rotate(315deg);
+}
+
+.iconChange .iconBox:nth-of-type(2) {
+  transform: translate(0px, -30px);
+  opacity: 0;
+}
+
+.iconChange .iconBox:nth-of-type(3) {
+  transform: scale(1.2) translate(-13px, 0px) rotate(-315deg);
+}
+
+/* ICON點擊後顯示畫面 */
+
+.overMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: 0.5s;
+}
+
+.overMenuLink {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.overMenuLink a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.5s;
+}
+
+.overMenuLink a:hover {
+  color: #f1f1f1;
+}
+
+.overMenu .overMenuClose {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 60px;
+  color: #f1f1f1;
+}

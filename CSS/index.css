@@ -1,0 +1,296 @@
+body {
+  margin: 0;
+  /* overflow-x: hidden;
+  transition: 2s; */
+}
+
+/* HEADER */
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  animation: headerAnima 32s linear infinite;
+}
+
+.showSide {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.showSide:nth-of-type(1) {
+  background-image: url(../image/indexImg/001.jpg);
+  background-position: bottom;
+}
+
+.showSide:nth-of-type(2) {
+  background-image: url(../image/indexImg/002.jpg);
+  background-position: center;
+}
+
+.showSide:nth-of-type(3) {
+  background-image: url(../image/indexImg/003.jpg);
+  background-position: top;
+}
+
+.showSide:nth-of-type(4) {
+  background-image: url(../image/indexImg/004.jpg);
+  background-position: left;
+}
+
+/* 分三張輪播 一張8秒 (2淡入/6播放/1淡出) 100%/32秒=3%/1秒 */
+
+@keyframes headerAnima {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  6% {
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+header>div:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+header>div:nth-of-type(2) {
+  animation-delay: 8s;
+}
+
+header>div:nth-of-type(3) {
+  animation-delay: 16s;
+}
+
+header>div:nth-of-type(4) {
+  animation-delay: 24s;
+}
+
+/* LOGO */
+
+#logoTokyo {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  z-index: 0;
+  width: 10vw;
+  height: 80vh;
+  background-image: url(../image/indexImg/LOGO_white.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.5s;
+}
+
+/* 主形象區 */
+
+section {
+  position: relative;
+  width: 960px;
+  height: 800px;
+  margin: 0 auto;
+  padding: 100 0 50 0;
+}
+
+.keyshowInfo:nth-of-type(1) {
+  position: relative;
+  top: 100px;
+  left: 80px;
+  height: 450px;
+  width: 520px;
+  /* background-color: lightskyblue; */
+}
+
+.keyshowInfo:nth-of-type(1) img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.7;
+}
+
+.keyshowInfo:nth-of-type(2) {
+  position: absolute;
+  top: 340px;
+  left: 560px;
+  height: 200px;
+  width: 480px;
+  font-family: "Noto Serif JP", serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--tokyoColor03);
+}
+
+.keyshowInfo:nth-of-type(3) {
+  position: absolute;
+  top: 400px;
+  left: 480px;
+  height: 300px;
+  width: 400px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: justify;
+  color: var(--tokyoColor04);
+  /* background-clip:padding-box; */
+  /* background-color: lightgrey; */
+}
+
+/* 特集介紹區 */
+
+#spacial {
+  position: relative;
+  height: 550px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 100 0;
+}
+
+#spacialTitle {
+  margin: 25px auto;
+  font-family: "Noto Serif JP", serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 9px;
+  writing-mode: vertical-lr;
+  color: var(--tokyoColor03);
+}
+
+hr {
+  width: 20%;
+}
+
+/* 裝slide盒子 */
+
+#forRightIcon {
+  position: absolute;
+  top: 220px;
+  right: 5%;
+}
+
+#forLeftIcon {
+  position: absolute;
+  top: 220px;
+  left: 5%;
+  opacity: 0;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+#spacialpage {
+  position: relative;
+  height: 400px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  /* border: 2px solid red; */
+}
+
+#showBox {
+  position: absolute;
+  left: 0px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+/* 企劃slide */
+
+.sliderBox {
+  height: 350px;
+  width: 300px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.sliderBox>a>div:nth-of-type(1) {
+  position: relative;
+  height: 200px;
+  background: linear-gradient( rgba(254, 225, 227, 0.7), rgba(232, 122, 144, 0.4));
+  overflow: hidden;
+}
+
+.sliderBox>a>div>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 75px;
+  z-index: 1;
+  background-color: var(--tokyoColor01);
+  font-size: 16px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.sliderBox>a>div:nth-of-type(2) {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 32px;
+  /* color: var(--tokyoColor04); */
+}
+
+.sliderBox img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.sliderBox img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.sliderBox a {
+  text-decoration: none;
+}
+
+.sliderBox a:link, .sliderBox a:visited {
+  color: black;
+}
+
+/* 底部 */
+
+footer {
+  height: 25px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--tokyoColor01);
+}
+
+.closeBody:nth-of-type(1) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background-color: var(--tokyoColor04);
+  transition: 1s;
+}

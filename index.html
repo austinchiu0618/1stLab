@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo</title>
+
+    <!-- font-awesome5.15.1 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css" rel="stylesheet">
+
+    <style>
+        @import "./CSS/same.css";
+        @import "./CSS/index.css";
+    </style>
+</head>
+
+<body>
+    <img id="openBodyImg" src="./image/indexImg/LOGO_open.png" alt="">
+    <div class="openBody"></div>
+    <div class="openBody"></div>
+    <div class="openBody"></div>
+    <!-- <div class="closeBody"></div> -->
+
+    <!-- 輪播區 -->
+    <!-- hero section design -->
+    <header>
+        <div class="showSide"></div>
+        <div class="showSide"></div>
+        <div class="showSide"></div>
+        <div class="showSide"></div>
+    </header>
+    <!-- 右上角ICON -->
+    <!-- ICON點擊後出現全區連結區 -->
+    <div id="myNavBox" class="overMenu">
+        <div class="overMenuLink">
+            <a href="./index.html">Home</a>
+            <a href="#showBox">特集</a>
+            <a href="./omikuji.html">【浅草寺企劃】</a>
+            <a href="./beer.html">【ビール企劃】</a>
+
+        </div>
+        <!-- ICON按鈕 -->
+        <div class="iconMenu" onclick="myIconBtn(this)">
+            <div class="iconBox"></div>
+            <div class="iconBox"></div>
+            <div class="iconBox"></div>
+        </div>
+    </div>
+    <div id="logoTokyo"></div>
+    <!-- 主形象區 -->
+    <section id="keyshow">
+        <div class="keyshowInfo">
+            <img src="./image/indexImg/tokyoMap.png" alt="">
+        </div>
+        <div class="keyshowInfo">東京の旅行</div>
+        <div class="keyshowInfo">
+            <p>
+                東京タワー･スカイツリー、高層ビルが建ち並ぶ首都東京。
+                新宿、渋谷・原宿・表参道、六本木、銀座などではファッションやスイーツ、カフェなど最新のトレンドを追った街歩きが楽しめます。
+                外国人に人気の築地では全国の食材・物品を購入することができます。
+                浅草の浅草寺門前町や柴又帝釈天の参道、谷中・根津・湯島などでは下町情緒を満喫できます。
+            </p>
+        </div>
+    </section>
+    <!-- 特集介紹區 -->
+    <div id="spacial">
+        <div id="spacialTitle">特集</div>
+        <hr>
+        <!-- 左右移動 -->
+        <div id="forRightIcon" onclick="forRight()"><i class="fas fa-angle-double-right" style="font-size:40px;"></i>
+        </div>
+        <div id="forLeftIcon" onclick="forLeft()"><i class="fas fa-angle-double-left" style="font-size:40px;"></i>
+        </div>
+        <div id="spacialpage">
+            <div id="showBox">
+                <div class="sliderBox">
+                    <a href="./omikuji.html">
+                        <div>
+                            <div>TRAVEL</div>
+                            <img class="isImg" src="./image/indexImg/omikuji.png" alt="">
+                        </div>
+                        <div>【浅草寺企劃】<br>今日のあなたの運勢は？</div>
+                    </a>
+                </div>
+                <div class="sliderBox">
+                    <a href="./beer.html">
+                        <div>
+                            <div>DRINK</div>
+                            <img src="./image/indexImg/izakaya_beer.png" alt="">
+                        </div>
+                        <div>【ビール企劃】<br>もう一杯いかがですか？</div>
+                    </a>
+                </div>
+                <div class="sliderBox">
+                    <a href="">
+                        <div>
+                            <div>FOOD</div>
+                            <img src="./image/indexImg/tsukemen.png" alt="">
+                        </div>
+                        <div>【池袋】<br>おすすめの美味しいつけ麺をご紹介！</div>
+                    </a>
+                </div>
+                <div class="sliderBox">
+                    <a href="">
+                        <div><img src="./image/indexImg/kouji.png" alt=""></div>
+                        <div>ただいまサイト準備中<br>ご理解とご協力をお願い致します。</div>
+                    </a>
+                </div>
+                <div class="sliderBox">
+                    <a href="">
+                        <div><img src="./image/indexImg/kouji.png" alt=""></div>
+                        <div>ただいまサイト準備中<br>ご理解とご協力をお願い致します。</div>
+                    </a>
+                </div>
+                <div class="sliderBox">
+                    <a href="">
+                        <div><img src="./image/indexImg/kouji.png" alt=""></div>
+                        <div>ただいまサイト準備中<br>ご理解とご協力をお願い致します。</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="./JavaScript/index.js" defer></script>
+
+</body>
+
+</html>
