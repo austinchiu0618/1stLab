@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ビール</title>
+    <style>
+        @import "./CSS/same.css";
+        @import "./CSS/beer.css";
+    </style>
+</head>
+
+<body>
+    <img id="openBodyImg" src="./image/indexImg/LOGO_open.png" alt="">
+    <div class="openBody"></div>
+    <div class="openBody"></div>
+    <div class="openBody"></div>
+    <!-- ICON點擊後出現全區連結區 -->
+    <div id="myNavBox" class="overMenu">
+        <div class="overMenuLink">
+            <a href="./index.html">Home</a>
+            <a href="./index.html#showBox">特集</a>
+            <a href="./omikuji.html">【浅草寺企劃】</a>
+        </div>
+        <!-- ICON按鈕 -->
+        <div class="iconMenu" onclick="myIconBtn(this)">
+            <div class="iconBox"></div>
+            <div class="iconBox"></div>
+            <div class="iconBox"></div>
+        </div>
+    </div>
+    <div id="logoTokyo"></div>
+    <div id="thisTitle">【ビール企劃】もう一杯いかがですか？</div>
+    <hr>
+    <div class="beerCardGame">
+        <div id="gameZone">
+            <div id="box"></div>
+            <div id="boxImg"></div>
+            <div id="finish">
+                <img id="spacebeer" src="./image/beerImg/mug_space.png" alt=""><img id="fullbeer"
+                    src="./image/beerImg/mug_full.png" alt="">
+            </div>
+            <div id="kanpai"><img src="./image/beerImg/beer_kanpai.png" alt=""></div>
+        </div>
+        <div id="gamePanel">
+            <div>ゲーム設定</div>
+            <div class="gameRadio">
+                <p>難度：</p>
+                <input type="radio" checked name="diffRadio" class="gameDiff" id="setEasy" value="4">
+                <label for="setEasy"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="58.5px" height="58.5px">
+                        <path fill-rule="evenodd" stroke="var(--tokyoColor01)" stroke-width="5px" stroke-linecap="butt"
+                            stroke-linejoin="miter" fill="none"
+                            d="M15.500,5.500 L40.500,5.500 C46.023,5.500 50.500,9.977 50.500,15.500 L50.500,40.500 C50.500,46.023 46.023,50.500 40.500,50.500 L15.500,50.500 C9.977,50.500 5.500,46.023 5.500,40.500 L5.500,15.500 C5.500,9.977 9.977,5.500 15.500,5.500 Z" />
+                        <text kerning="auto" font-family="Adobe Fan Heiti Std" fill="var(--tokyoColor01)"
+                            transform="matrix( 1.43097281198396, 0, 0, 1.30072592031918,14.4259169033086, 38.1715475805333)"
+                            font-size="21.526px">
+                            <tspan font-size="21.526px" font-family="Noto Sans JP" font-weight="bold">&#26131;</tspan>
+                        </text>
+                    </svg></label>
+                <input type="radio" name="diffRadio" class="gameDiff" id="setNormal" value="6">
+                <label for="setNormal"><svg xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="58.5px" height="58.5px">
+                        <path fill-rule="evenodd" stroke="var(--tokyoColor01)" stroke-width="5px" stroke-linecap="butt"
+                            stroke-linejoin="miter" fill="none"
+                            d="M15.500,5.500 L40.500,5.500 C46.023,5.500 50.500,9.977 50.500,15.500 L50.500,40.500 C50.500,46.023 46.023,50.500 40.500,50.500 L15.500,50.500 C9.977,50.500 5.500,46.023 5.500,40.500 L5.500,15.500 C5.500,9.977 9.977,5.500 15.500,5.500 Z" />
+                        <text kerning="auto" font-family="Adobe Fan Heiti Std" fill="var(--tokyoColor01)"
+                            transform="matrix( 1.43097281198396, 0, 0, 1.30072592031918,13.4164905822423, 37.9592662416493)"
+                            font-size="21.526px">
+                            <tspan font-size="21.526px" font-family="Noto Sans JP" font-weight="bold">&#26222;</tspan>
+                        </text>
+                    </svg></label>
+                <input type="radio" name="diffRadio" class="gameDiff" id="setDifficult" value="9">
+                <label for="setDifficult"><svg xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="58.5px" height="58.5px">
+                        <path fill-rule="evenodd" stroke="var(--tokyoColor01)" stroke-width="5px" stroke-linecap="butt"
+                            stroke-linejoin="miter" fill="none"
+                            d="M15.500,5.500 L40.500,5.500 C46.023,5.500 50.500,9.977 50.500,15.500 L50.500,40.500 C50.500,46.023 46.023,50.500 40.500,50.500 L15.500,50.500 C9.977,50.500 5.500,46.023 5.500,40.500 L5.500,15.500 C5.500,9.977 9.977,5.500 15.500,5.500 Z" />
+                        <text kerning="auto" font-family="Adobe Fan Heiti Std" fill="var(--tokyoColor01)"
+                            transform="matrix( 1.43097281198396, 0, 0, 1.30072592031918,12.6529415892605, 39.3539074421034)"
+                            font-size="21.526px">
+                            <tspan font-size="21.526px" font-family="Noto Sans JP" font-weight="bold">&#38627;</tspan>
+                        </text>
+                    </svg></label>
+            </div>
+            <div class="gameRadio">
+                <p>限制失敗：</p>
+                <input type="radio" name="loseRadio" class="loseLimit" id="loseLimitYes" value="true">
+                <label for="loseLimitYes"><svg xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="58.5px" height="58.5px">
+                        <path fill-rule="evenodd" stroke="var(--tokyoColor01)" stroke-width="5px" stroke-linecap="butt"
+                            stroke-linejoin="miter" fill="none"
+                            d="M15.500,5.500 L40.500,5.500 C46.023,5.500 50.500,9.977 50.500,15.500 L50.500,40.500 C50.500,46.023 46.023,50.500 40.500,50.500 L15.500,50.500 C9.977,50.500 5.500,46.023 5.500,40.500 L5.500,15.500 C5.500,9.977 9.977,5.500 15.500,5.500 Z" />
+                        <text kerning="auto" font-family="Adobe Fan Heiti Std" fill="var(--tokyoColor01)"
+                            transform="matrix( 1.43097281198396, 0, 0, 1.30072592031918,19.0879013269639, 39.4058073625534)"
+                            font-size="21.526px">
+                            <tspan font-size="21.526px" font-family="Noto Sans JP" font-weight="bold">Y</tspan>
+                        </text>
+                    </svg></label>
+                <input type="radio" checked name="loseRadio" class="loseLimit" id="loseLimitNo" value="false">
+                <label for="loseLimitNo"><svg xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="58.5px" height="58.5px">
+                        <path fill-rule="evenodd" stroke="var(--tokyoColor01)" stroke-width="5px" stroke-linecap="butt"
+                            stroke-linejoin="miter" fill="none"
+                            d="M15.500,5.500 L40.500,5.500 C46.023,5.500 50.500,9.977 50.500,15.500 L50.500,40.500 C50.500,46.023 46.023,50.500 40.500,50.500 L15.500,50.500 C9.977,50.500 5.500,46.023 5.500,40.500 L5.500,15.500 C5.500,9.977 9.977,5.500 15.500,5.500 Z" />
+                        <text kerning="auto" font-family="Adobe Fan Heiti Std" fill="var(--tokyoColor01)"
+                            transform="matrix( 1.43097281198396, 0, 0, 1.30072592031918,16.5035989288452, 37.4058073625534)"
+                            font-size="21.526px">
+                            <tspan font-size="21.526px" font-family="Noto Sans JP" font-weight="bold">N</tspan>
+                        </text>
+                    </svg></label>
+            </div>
+            <div class="gameRadio">
+                <p>限制時間：</p>
+                <input type="radio" name="timeRadio" class="timeLimit" id="timeLimitYes" value="true">
+                <label for="timeLimitYes"><svg xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="58.5px" height="58.5px">
+                        <path fill-rule="evenodd" stroke="var(--tokyoColor01)" stroke-width="5px" stroke-linecap="butt"
+                            stroke-linejoin="miter" fill="none"
+                            d="M15.500,5.500 L40.500,5.500 C46.023,5.500 50.500,9.977 50.500,15.500 L50.500,40.500 C50.500,46.023 46.023,50.500 40.500,50.500 L15.500,50.500 C9.977,50.500 5.500,46.023 5.500,40.500 L5.500,15.500 C5.500,9.977 9.977,5.500 15.500,5.500 Z" />
+                        <text kerning="auto" font-family="Adobe Fan Heiti Std" fill="var(--tokyoColor01)"
+                            transform="matrix( 1.43097281198396, 0, 0, 1.30072592031918,19.0879013269639, 39.4058073625534)"
+                            font-size="21.526px">
+                            <tspan font-size="21.526px" font-family="Noto Sans JP" font-weight="bold">Y</tspan>
+                        </text>
+                    </svg></label>
+                <input type="radio" checked name="timeRadio" class="timeLimit" id="timeLimitNo" value="false">
+                <label for="timeLimitNo"><svg xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="58.5px" height="58.5px">
+                        <path fill-rule="evenodd" stroke="var(--tokyoColor01)" stroke-width="5px" stroke-linecap="butt"
+                            stroke-linejoin="miter" fill="none"
+                            d="M15.500,5.500 L40.500,5.500 C46.023,5.500 50.500,9.977 50.500,15.500 L50.500,40.500 C50.500,46.023 46.023,50.500 40.500,50.500 L15.500,50.500 C9.977,50.500 5.500,46.023 5.500,40.500 L5.500,15.500 C5.500,9.977 9.977,5.500 15.500,5.500 Z" />
+                        <text kerning="auto" font-family="Adobe Fan Heiti Std" fill="var(--tokyoColor01)"
+                            transform="matrix( 1.43097281198396, 0, 0, 1.30072592031918,16.5035989288452, 37.4058073625534)"
+                            font-size="21.526px">
+                            <tspan font-size="21.526px" font-family="Noto Sans JP" font-weight="bold">N</tspan>
+                        </text>
+                    </svg></label>
+            </div>
+            <div>
+                <div id="showLimitTime"></div>
+                <div id="showLimitlose"></div>
+            </div>
+            <button id="gameStart"></button>
+        </div>
+    </div>
+    <div id="cheat"></div>
+    <script src="./JavaScript/beer.js"></script>
+</body>
+
+</html>

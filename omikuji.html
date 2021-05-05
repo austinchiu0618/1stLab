@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじ</title>
+    <style>
+        @import "./CSS/same.css";
+        @import "./CSS/omikuji.css";
+    </style>
+</head>
+
+<body>
+    <img id="openBodyImg" src="./image/indexImg/LOGO_open.png" alt="">
+    <div class="openBody"></div>
+    <div class="openBody"></div>
+    <div class="openBody"></div>
+    <!-- ICON點擊後出現全區連結區 -->
+    <div id="myNavBox" class="overMenu">
+        <div class="overMenuLink">
+            <a href="./index.html">Home</a>
+            <a href="./index.html#showBox">特集</a>
+            <a href="./beer.html">【ビール企劃】</a>
+        </div>
+        <!-- ICON按鈕 -->
+        <div class="iconMenu" onclick="myIconBtn(this)">
+            <div class="iconBox"></div>
+            <div class="iconBox"></div>
+            <div class="iconBox"></div>
+        </div>
+    </div>
+    <!-- Logo -->
+    <div id="logoTokyo"></div>
+    <div id="thisTitle">【浅草寺企劃】今日のあなたの運勢は？</div>
+    <hr>
+    <div class="byebye">
+        <div id="putMoneyBox" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="animeImg"><img id="imgani" src="./image/omikujiImg/Bells.png" alt=""></div>
+            <div id="box"><img src="./image/omikujiImg/box.png" alt=""></div>
+        </div>
+        <div id="people"><img src="./image/omikujiImg/people.png" alt=""></div>
+        <div id="money"><img src="./image/omikujiImg/saifu.png" alt=""></div>
+        <div id="coin"><img id="coinImg" src="./image/omikujiImg/coin.png" alt="" draggable="true"
+                ondragstart="drag(event)"></div>
+        <div id="mikujiBox"><img src="./image/omikujiImg/mikujiBox.png" alt=""></div>
+    </div>
+    <div>
+        <div class="MikujiFade" id="showMikuji">
+            <img id="finalAnswer01" src="" alt="">
+            <img id="finalAnswer02" src="" alt="">
+        </div>
+    </div>
+    <script src="./JavaScript/omikuji.js" defer></script>
+
+</body>
+
+</html>
