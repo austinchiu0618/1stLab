@@ -2,3 +2,5 @@
 #一個簡單的主頁以及抽籤，還有翻牌遊戲
 
 https://youtu.be/lPMjYW1bd6M
+
+https://austinchiu0618.github.io/1stLab/
